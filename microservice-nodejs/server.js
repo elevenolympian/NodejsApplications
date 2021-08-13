@@ -6,7 +6,7 @@ const axios = require('axios');
 
 server.get('/', async(req, res) => {
     console.log("main router")
-    const result = await axios.get('http://localhost:4000/db');
+    //const result = await axios.get('http://localhost:4000/db');
     res.send(result.data); 
 })
 .get('/testroute', (_, res) => {

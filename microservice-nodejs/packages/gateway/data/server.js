@@ -2,14 +2,9 @@ const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const bodyParser = require('body-parser');
 const portConfig = require('./config');
-// const {makeExecutableSchema} = require('graphql-tools');
 
 async function startApolloServer() {
 
-//   const schema = makeExecutableSchema ({
-//       typeDefs,
-//       resolvers
-//   })
 
   const server = new ApolloServer({playground: true, introspection: true, typeDefs, resolvers});
   await server.start();
